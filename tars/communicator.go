@@ -1,7 +1,7 @@
 package tars
 
 import (
-	s "github.com/TarsCloud/TarsGo/tars/model"
+	s "github.com/chencaixiong/TarsGo/tars/model"
 	"sync"
 )
 

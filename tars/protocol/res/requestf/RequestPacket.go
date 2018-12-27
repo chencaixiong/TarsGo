@@ -6,7 +6,7 @@ package requestf
 import (
 	"fmt"
 
-	"github.com/TarsCloud/TarsGo/tars/protocol/codec"
+	"github.com/chencaixiong/TarsGo/tars/protocol/codec"
 )
 
 //RequestPacket strcut implement

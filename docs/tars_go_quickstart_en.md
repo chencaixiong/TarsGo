@@ -2,16 +2,16 @@
 
 ## Environment construction
 
-Tars base component installation reference [Deploy](https://github.com/TarsCloud/Tars/tree/master/deploy)
+Tars base component installation reference [Deploy](https://github.com/chencaixiong/Tars/tree/master/deploy)
 
 Golang environment ready, tarsgo requires the golang version to be 1.9.x and above.。
 
-Install tars:  `go get github.com/TarsCloud/TarsGo/tars `
+Install tars:  `go get github.com/chencaixiong/TarsGo/tars `
 
 Compile the tars protocol to Golang tool:
 
 ```shell
-cd $GOPATH/src/github.com/TarsCloud/TarsGo/tars/tools/tars2go && go build . 
+cd $GOPATH/src/github.com/chencaixiong/TarsGo/tars/tools/tars2go && go build . 
 
 cp tars2go $GOPATH/bin
 ```
@@ -82,15 +82,15 @@ Click "Submit", after successful, the TestApp application under the menu number 
 Run the create_tars_server.sh script to automatically create the files necessary for the service, If there is a syntax error during execution, try to use `dos2unix create_tars_server.sh` to transcode.
 
 ```shell
-sh $GOPATH/src/github.com/TarsCloud/TarsGo/tars/tools/create_tars_server.sh [App] [Server] [Servant]
+sh $GOPATH/src/github.com/chencaixiong/TarsGo/tars/tools/create_tars_server.sh [App] [Server] [Servant]
 E.g:  
-sh $GOPATH/src/github.com/TarsCloud/TarsGo/tars/tools/create_tars_server.sh TestApp HelloGo SayHello
+sh $GOPATH/src/github.com/chencaixiong/TarsGo/tars/tools/create_tars_server.sh TestApp HelloGo SayHello
 ```
 
 After the command is executed, the code will be generated into GOPATH, and the directory will be named in `APP/Server`. The generated code also prompts the specific path.
 
 ```shell
-[root@1-1-1-1 ~]# sh $GOPATH/src/github.com/TarsCloud/TarsGo/tars/tools/create_tars_server.sh TestApp HelloGo SayHello
+[root@1-1-1-1 ~]# sh $GOPATH/src/github.com/chencaixiong/TarsGo/tars/tools/create_tars_server.sh TestApp HelloGo SayHello
 [create server: TestApp.HelloGo ...]
 [mkdir: $GOPATH/src/TestApp/HelloGo/]
 >>>Now doing:./start.sh >>>>
@@ -160,7 +160,7 @@ cat  $GOPATH/src/TestApp/HelloGo/HelloGo.go
 package main
 
 import (
-	"github.com/TarsCloud/TarsGo/tars"
+	"github.com/chencaixiong/TarsGo/tars"
 
 	"TestApp"
 )
@@ -189,7 +189,7 @@ package main
 
 import (
         "fmt"
-        "github.com/TarsCloud/TarsGo/tars"
+        "github.com/chencaixiong/TarsGo/tars"
 
         "TestApp"
 )
@@ -246,7 +246,7 @@ package main
 
 import (
 	"net/http"
-	"github.com/TarsCloud/TarsGo/tars"
+	"github.com/chencaixiong/TarsGo/tars"
 )
 
 func main() {

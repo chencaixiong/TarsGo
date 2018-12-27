@@ -6,7 +6,7 @@
 - Go's goroutine concurrency mechanism means Go is very suitable for large-scale high-concurrency back-end server program development. The Go language has near C/C++ performance and near Python productivity.
 - At Tencent, part of the existing C++ development team has gradually turned into Go developers. Tars, a widely used RPC framework, supports C++, Java, NodeJS, and PHP, and now Go. The combination with Go language has become a general trend. Therefore, in the voice of users, we launched Tarsgo, and we have applied to Tencent map application, YingYongbao application, Internet plus and other projects.
 
-- Learn more about the whole Tars architecture and design at [Introduction](https://github.com/TarsCloud/Tars/blob/master/Introduction.en.md).
+- Learn more about the whole Tars architecture and design at [Introduction](https://github.com/chencaixiong/Tars/blob/master/Introduction.en.md).
 
 
 ## Function & features
@@ -23,10 +23,10 @@
 
 
 ## Install
-- For install OSS and other basic servers, see the [Installation](https://github.com/TarsCloud/Tars/blob/master/Install.md) document.
-For quick install OSS and other basic servers, see more about [Deploy](https://github.com/TarsCloud/Tars/tree/master/deploy)
+- For install OSS and other basic servers, see the [Installation](https://github.com/chencaixiong/Tars/blob/master/Install.md) document.
+For quick install OSS and other basic servers, see more about [Deploy](https://github.com/chencaixiong/Tars/tree/master/deploy)
 - Requires Go 1.9.x or above (see https://golang.org/doc/install for help installing Go)
-- go get -u github.com/TarsCloud/TarsGo/tars
+- go get -u github.com/chencaixiong/TarsGo/tars
 
 
 ## Quickstart
@@ -43,7 +43,7 @@ For quick install OSS and other basic servers, see more about [Deploy](https://g
 
 Create a tars file, like hello.tars, under $GOPATH/src (for example, $GOPATH/src/TestApp/TestServer/hello.tars).
 
-For more detail about tars protocol, see [tars_protocol](https://github.com/TarsCloud/TarsProtocol/blob/master/docs-en/tars_protocol.md)
+For more detail about tars protocol, see [tars_protocol](https://github.com/chencaixiong/TarsProtocol/blob/master/docs-en/tars_protocol.md)
 Tars protocol is a binary ,IDL-based protocol similar to protocolbuffers.
 	
 ```go
@@ -65,7 +65,7 @@ module TestApp
 ##### 1.2.1 build tars2go
 Compile and install the tars2go tools.
 
-    go install $GOPATH/src/github.com/TarsCloud/TarsGo/tars/tools/tars2go
+    go install $GOPATH/src/github.com/chencaixiong/TarsGo/tars/tools/tars2go
 
 ##### 1.2.2 compile the tars file and translate into go file
 	tars2go --outdir=./vendor hello.tars
@@ -74,7 +74,7 @@ Compile and install the tars2go tools.
 package main
 
 import (
-    "github.com/TarsCloud/TarsGo/tars"
+    "github.com/chencaixiong/TarsGo/tars"
 
     "TestApp"
 )
@@ -293,7 +293,7 @@ package main
 
 import (
     "fmt"
-    "github.com/TarsCloud/TarsGo/tars"
+    "github.com/chencaixiong/TarsGo/tars"
     "TestApp"
 )
 //tars.Communicator should only init once and be global
@@ -439,7 +439,7 @@ package main
 
 import (
     "fmt"
-    "github.com/TarsCloud/TarsGo/tars"
+    "github.com/chencaixiong/TarsGo/tars"
     "TestApp"
 )
 
@@ -469,7 +469,7 @@ package main
 
 import (
     "fmt"
-    "github.com/TarsCloud/TarsGo/tars"
+    "github.com/chencaixiong/TarsGo/tars"
     "time"
     "TestApp"
 )
@@ -495,7 +495,7 @@ func main() {
 ```
 
 ##### 2.4.5 call by set
-Client can call Server by set through configuration file mentioned about. Which   enableset will be y and setdivision  will set like gray.sz.* . See https://github.com/TarsCloud/Tars/blob/master/docs-en/tars_idc_set.md for more detail.
+Client can call Server by set through configuration file mentioned about. Which   enableset will be y and setdivision  will set like gray.sz.* . See https://github.com/chencaixiong/Tars/blob/master/docs-en/tars_idc_set.md for more detail.
 If u want call by set manually, tarsgo will support this feature soon.
 ##### 2.4.6. Hash call
 Since multiple servers can be deployed, client requests are randomly distributed to the server, but in some cases, it is desirable that certain requests are always sent to a particular server. In this case, Tars provides a simple way to achieve which is called hash-call. Tarsgo will support this feature soon.
@@ -646,11 +646,11 @@ Description:
 > * Note that when you call createPropertyReport, you must create and save the created object after the service is enabled, and then just take the object to report, do not create it each time you use.
 
 ### 9 remote configuration
-User can setup remote configuration from OSS. See more detail in https://github.com/TarsCloud/TarsFramework/blob/master/docs-en/tars_config.md . 
+User can setup remote configuration from OSS. See more detail in https://github.com/chencaixiong/TarsFramework/blob/master/docs-en/tars_config.md . 
 That is an example to illustrate how to use this api to get configuration file from remote.
 
 ```go
-import "github.com/TarsCloud/TarsGo/tars"
+import "github.com/chencaixiong/TarsGo/tars"
 ...
 cfg := tars.GetServerConfig()
 remoteConf := tars.NewRConf(cfg.App, cfg.Server, cfg.BasePath)
@@ -732,7 +732,7 @@ package main
 
 import (
 	"net/http"
-	"github.com/TarsCloud/TarsGo/tars"
+	"github.com/chencaixiong/TarsGo/tars"
 )
 
 func main() {

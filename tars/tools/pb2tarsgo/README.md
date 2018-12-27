@@ -1,13 +1,13 @@
 # Usage
 ```
-go get github.com/TarsCloud/TarsGo/tars
+go get github.com/chencaixiong/TarsGo/tars
 go get  github.com/golang/protobuf/{proto,protoc-gen-go}
 install protoc
 ```
 
 - Add tarsrpc plugin for protoc-gen-go
 ```
-	cd $GOPATH/src/github.com/golang/protobuf/protoc-gen-go &&  cp -r $GOPATH/src/github.com/TarsCloud/TarsGo/tars/tools/pb2tarsgo/protoc-gen-go/{link_tarsrpc.go, tarsrpc} .
+	cd $GOPATH/src/github.com/golang/protobuf/protoc-gen-go &&  cp -r $GOPATH/src/github.com/chencaixiong/TarsGo/tars/tools/pb2tarsgo/protoc-gen-go/{link_tarsrpc.go, tarsrpc} .
 	go build .
 	cp protoc-gen-go $GOPATH/bin
 	export PATH=$PATH:$GOPATH/bin
@@ -47,7 +47,7 @@ protoc --go_out=plugins=tarsrpc:. helloworld.proto
 package main
 
 import (
-    "github.com/TarsCloud/TarsGo/tars"
+    "github.com/chencaixiong/TarsGo/tars"
     "helloworld" 
 )
 
@@ -77,7 +77,7 @@ package main
 
 import (
     "fmt"
-    "github.com/TarsCloud/TarsGo/tars"
+    "github.com/chencaixiong/TarsGo/tars"
     "helloworld"
 )
 

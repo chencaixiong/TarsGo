@@ -2,7 +2,7 @@
 
 ## 关于
 - 	Tarsgo是基于Golang编程语言使用Tars协议的高性能RPC框架。随着docker,k8s,etcd等容器化技术的兴起，Go语言变得流行起来。Go的goroutine并发机制使Go非常适合用于大规模高并发后端服务程序的开发。 Go语言具有接近C/C++的性能和接近python的生产力。在腾讯，一部分现有的C++开发人员正逐渐向Go转型，Tars作为广泛使用的RPC框架，现已支持C++/Java/Nodejs/Php，其与Go语言的结合已成为大势所趋。因此，在广大用户的呼声中我们推出了Tarsgo,并且已经将它应用于腾讯地图、应用宝、互联网+以及其他项目中。
-- 关于tars的整体架构和设计理念，请阅读 [Tars介绍](https://github.com/TarsCloud/Tars/blob/master/Introduction.md)
+- 关于tars的整体架构和设计理念，请阅读 [Tars介绍](https://github.com/chencaixiong/Tars/blob/master/Introduction.md)
 
 ## 功能特性
 - Tars2go工具: tars文件自动生成并转换为go语言，包含用go语言实现的RPC服务端/客户端代码
@@ -17,10 +17,10 @@
 
 
 ## 安装
-- 对于安装OSS和其他基本服务, 请[安装文档](https://github.com/TarsCloud/Tars/blob/master/Install.zh.md)，
-快速安装，请查看[快速部署](https://github.com/TarsCloud/Tars/tree/master/deploy)
+- 对于安装OSS和其他基本服务, 请[安装文档](https://github.com/chencaixiong/Tars/blob/master/Install.zh.md)，
+快速安装，请查看[快速部署](https://github.com/chencaixiong/Tars/tree/master/deploy)
 - 要求Go 1.9.x 或以上版本,请查看https://golang.org/doc/install
-- go get -u github.com/TarsCloud/TarsGo/tars
+- go get -u github.com/chencaixiong/TarsGo/tars
 
 
 ## 快速开始
@@ -37,7 +37,7 @@
 #### 1.1 接口定义
 
 在 $GOPATH/src下编写一个tars文件，如hello.tars , 比如 $GOPATH/src/TestApp/TestServer/hello.tars.
-有关tars协议的更多详细信息, 请查看 https://github.com/TarsCloud/TarsTup/blob/master/docs-en/tars_tup.md
+有关tars协议的更多详细信息, 请查看 https://github.com/chencaixiong/TarsTup/blob/master/docs-en/tars_tup.md
 
 ```
 	
@@ -60,7 +60,7 @@
 ##### 1.2.1 构建 tars2go
 编译并安装tars2go工具
 
-	go install $GOPATH/src/github.com/TarsCloud/TarsGo/tars/tools/tars2go
+	go install $GOPATH/src/github.com/chencaixiong/TarsGo/tars/tools/tars2go
 
 ##### 1.2.2 编译tars文件并转成go文
 	tars2go --outdir=./vendor hello.tars
@@ -69,7 +69,7 @@
 package main
 
 import (
-    "github.com/TarsCloud/TarsGo/tars"
+    "github.com/chencaixiong/TarsGo/tars"
 
     "TestApp"
 )
@@ -292,7 +292,7 @@ package main
 
 import (
     "fmt"
-    "github.com/TarsCloud/TarsGo/tars"
+    "github.com/chencaixiong/TarsGo/tars"
     "TestApp"
 )
 //tars.Communicator should only init once and be global
@@ -435,7 +435,7 @@ package main
 
 import (
     "fmt"
-    "github.com/TarsCloud/TarsGo/tars"
+    "github.com/chencaixiong/TarsGo/tars"
     "TestApp"
 )
 
@@ -464,7 +464,7 @@ package main
 
 import (
     "fmt"
-    "github.com/TarsCloud/TarsGo/tars"
+    "github.com/chencaixiong/TarsGo/tars"
     "time"
     "TestApp"
 )
@@ -489,7 +489,7 @@ func main() {
 ```
 
 ##### 2.4.5 通过set调用
-客户端可以通过set来调用服务端，只需要配置上文提到的配置文件，其中enableset置为y，setdivision比如设置为gray.sz. *。 有关更多详细信息，请参阅https://github.com/TarsCloud/Tars/blob/master/docs-en/tars_idc_set.md。
+客户端可以通过set来调用服务端，只需要配置上文提到的配置文件，其中enableset置为y，setdivision比如设置为gray.sz. *。 有关更多详细信息，请参阅https://github.com/chencaixiong/Tars/blob/master/docs-en/tars_idc_set.md。
 如果您想手动通过set调用，tarsgo将很快支持此功能。
 
 ##### 2.4.6. Hash调用
@@ -636,11 +636,11 @@ Info是一个字符串，可以直接将字符串上报给tarsnotify。 上报�
 > * 注意，当你在调用createPropertyReport时，必须在启用服务后创建并保存所创建的对象，然后只需将对象上报，不要在你每次使用时都创建它。
 
 ### 9 远程配置
-用户可以从OSS设置远程配置。详情请查看https://github.com/TarsCloud/TarsFramework/blob/master/docs-en/tars_config.md . 
+用户可以从OSS设置远程配置。详情请查看https://github.com/chencaixiong/TarsFramework/blob/master/docs-en/tars_config.md . 
 如下示例用于说明如何使用此api从远程获取配置文件。
 
 ```go
-import "github.com/TarsCloud/TarsGo/tars"
+import "github.com/chencaixiong/TarsGo/tars"
 ...
 cfg := tars.GetServerConfig()
 remoteConf := tars.NewRConf(cfg.App, cfg.Server, cfg.BasePath)
@@ -723,7 +723,7 @@ package main
 
 import (
 	"net/http"
-	"github.com/TarsCloud/TarsGo/tars"
+	"github.com/chencaixiong/TarsGo/tars"
 )
 
 func main() {

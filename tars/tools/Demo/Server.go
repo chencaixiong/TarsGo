@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/TarsCloud/TarsGo/tars"
+	"github.com/chencaixiong/TarsGo/tars"
 
 	"_APP_"
 )

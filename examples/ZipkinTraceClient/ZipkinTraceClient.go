@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/TarsCloud/TarsGo/tars"
-	"github.com/TarsCloud/TarsGo/tars/plugin/zipkintracing"
+	"github.com/chencaixiong/TarsGo/tars"
+	"github.com/chencaixiong/TarsGo/tars/plugin/zipkintracing"
 
 	"ZipkinTraceApp"
 	"net/http"

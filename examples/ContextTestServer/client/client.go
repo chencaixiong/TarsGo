@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/TarsCloud/TarsGo/tars"
+	"github.com/chencaixiong/TarsGo/tars"
 
 	"StressTest"
 )

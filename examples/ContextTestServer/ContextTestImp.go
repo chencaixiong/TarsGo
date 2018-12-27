@@ -3,9 +3,9 @@ package main
 import (
 	"context"
 
-	"github.com/TarsCloud/TarsGo/tars"
+	"github.com/chencaixiong/TarsGo/tars"
 
-	"github.com/TarsCloud/TarsGo/tars/util/current"
+	"github.com/chencaixiong/TarsGo/tars/util/current"
 )
 
 type ContextTestImp struct {

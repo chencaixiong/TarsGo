@@ -9,8 +9,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/TarsCloud/TarsGo/tars/util/current"
-	"github.com/TarsCloud/TarsGo/tars/util/gpool"
+	"github.com/chencaixiong/TarsGo/tars/util/current"
+	"github.com/chencaixiong/TarsGo/tars/util/gpool"
 )
 
 type tcpHandler struct {

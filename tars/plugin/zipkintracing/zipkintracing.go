@@ -6,8 +6,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/TarsCloud/TarsGo/tars"
-	"github.com/TarsCloud/TarsGo/tars/protocol/res/requestf"
+	"github.com/chencaixiong/TarsGo/tars"
+	"github.com/chencaixiong/TarsGo/tars/protocol/res/requestf"
 	opentracing "github.com/opentracing/opentracing-go"
 	"github.com/opentracing/opentracing-go/ext"
 	oplog "github.com/opentracing/opentracing-go/log"

@@ -5,7 +5,7 @@ package statf
 
 import (
 	"fmt"
-	"github.com/TarsCloud/TarsGo/tars/protocol/codec"
+	"github.com/chencaixiong/TarsGo/tars/protocol/codec"
 )
 
 //StatSampleMsg strcut implement
